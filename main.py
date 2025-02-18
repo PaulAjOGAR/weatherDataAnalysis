@@ -1,43 +1,14 @@
-import streamlit as st
-import requests
-import pandas as pd
 import matplotlib.pyplot as plt
-from datetime import datetime
+import numpy as np
+import streamlit as st
 
-WEATHERAPI_KEY = "c7a754bf38384796ad2214825250802"
-
-def fetch_weather_data(city, api_key=WEATHERAPI_KEY):
-    url = f"https://api.weatherapi.com/v1/forecast.json?key={api_key}&q={city}&days=7"
-    response = requests.get(url)
-
-    if response.status_code != 200:
-        st.error(f"Error fetching data: {response.text}")
-        return None
-
-    data = response.json()
-    records = []
-
-    if "forecast" in data and "forecastday" in data["forecast"]:
-        for day in data["forecast"]["forecastday"]:
-            date_obj = datetime.strptime(day["date"], "%Y-%m-%d")
-            formatted_date = date_obj.strftime("%A, %d %B")
-
-            records.append({
-                "Date": formatted_date,
-                "Max Temp (°C)": day["day"]["maxtemp_c"],
-                "Min Temp (°C)": day["day"]["mintemp_c"],
-                "Avg Temp (°C)": day["day"]["avgtemp_c"],
-                "Humidity (%)": day["day"]["avghumidity"],
-                "Wind Speed (km/h)": day["day"]["maxwind_kph"],
-                "UV Index": day["day"]["uv"],
-                "Condition": day["day"]["condition"]["text"]
-            })
-
-    return pd.DataFrame(records) if records else None
+from functions import fetch_weather_data
 
 st.title("3-Day Weather Forecast")
 
 city = st.text_input("Enter city name:", "London")
+
+fetch_weather_data(city)
 
 if st.button("Get Weather Data"):
     with st.spinner("Fetching weather data..."):
@@ -46,11 +17,23 @@ if st.button("Get Weather Data"):
     if df is not None:
         st.success(f"Weather forecast for {city}")
 
-        st.subheader("3-Day Weather Data")
-        st.dataframe(df.head(3).drop(columns=["Humidity (%)"]))
+        st.subheader("Weather Data (3 Days)")
+        st.dataframe(df.drop(columns=["Humidity (%)"]))
 
+        # ✅ Calculate Standard Deviation and Variance
+        std_dev_temp_max = np.std(df["Max Temp (°C)"])
+        std_dev_temp_min = np.std(df["Min Temp (°C)"])
+        std_dev_temp_avg = np.std(df["Avg Temp (°C)"])
+        std_dev_wind_speed = np.std(df["Wind Speed (km/h)"])
+
+        var_temp_max = np.var(df["Max Temp (°C)"])
+        var_temp_min = np.var(df["Min Temp (°C)"])
+        var_temp_avg = np.var(df["Avg Temp (°C)"])
+        var_wind_speed = np.var(df["Wind Speed (km/h)"])
+
+        # Plot Temperature Trends
         st.subheader("Temperature Trends")
-        fig, ax = plt.subplots(figsize=(8, 4))
+        fig, ax = plt.subplots(figsize=(16,8 ))
         ax.plot(df["Date"], df["Max Temp (°C)"], label="Max Temp", color="red", marker="o")
         ax.plot(df["Date"], df["Min Temp (°C)"], label="Min Temp", color="blue", marker="o")
         ax.plot(df["Date"], df["Avg Temp (°C)"], label="Avg Temp", color="green", linestyle="--")
@@ -61,8 +44,9 @@ if st.button("Get Weather Data"):
         ax.legend()
         st.pyplot(fig)
 
+        # Wind Speed Graph
         st.subheader("Wind Speed Trend")
-        fig, ax = plt.subplots(figsize=(8, 4))
+        fig, ax = plt.subplots(figsize=(16, 8))
         ax.plot(df["Date"], df["Wind Speed (km/h)"], label="Wind Speed", color="purple", marker="s")
 
         ax.set_xlabel("Date")
@@ -71,15 +55,29 @@ if st.button("Get Weather Data"):
         ax.legend()
         st.pyplot(fig)
 
-        st.subheader("UV Index Trend")
-        fig, ax = plt.subplots(figsize=(8, 4))
-        ax.plot(df["Date"], df["UV Index"], label="UV Index", color="orange", marker="D")
-
-        ax.set_xlabel("Date")
-        ax.set_ylabel("UV Index")
-        ax.set_xticklabels(df["Date"], rotation=45)
-        ax.legend()
-        st.pyplot(fig)
 
     else:
         st.error("No data found. Try a different city.")
+
+import streamlit as st
+import base64
+
+def set_png_as_page_bg(image_file):
+    with open(image_file, "rb") as f:
+        bin_str = base64.b64encode(f.read()).decode()
+
+    page_bg_img = f"""
+    <style>
+    .stApp {{
+        background-image: url("data:image/png;base64,{bin_str}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }}
+    </style>
+    """
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# Set the background image
+set_png_as_page_bg("background2.png")  # Change this to your image file name
+
