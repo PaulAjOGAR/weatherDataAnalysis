@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import streamlit as st
-
+import base64
 from functions import fetch_weather_data
 
 st.title("3-Day Weather Forecast")
@@ -9,6 +9,26 @@ st.title("3-Day Weather Forecast")
 city = st.text_input("Enter city name:", "London")
 
 fetch_weather_data(city)
+
+def set_png_as_page_bg(image_file):
+    with open(image_file, "rb") as f:
+        bin_str = base64.b64encode(f.read()).decode()
+
+    page_bg_img = f"""
+    <style>
+    .stApp {{
+        background-image: url("data:image/png;base64,{bin_str}");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }}
+    </style>
+    """
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+
+# Set the background image
+set_png_as_page_bg("background2.png")  # Change this to your image file name
+
 
 if st.button("Get Weather Data"):
     with st.spinner("Fetching weather data..."):
@@ -58,26 +78,4 @@ if st.button("Get Weather Data"):
 
     else:
         st.error("No data found. Try a different city.")
-
-import streamlit as st
-import base64
-
-def set_png_as_page_bg(image_file):
-    with open(image_file, "rb") as f:
-        bin_str = base64.b64encode(f.read()).decode()
-
-    page_bg_img = f"""
-    <style>
-    .stApp {{
-        background-image: url("data:image/png;base64,{bin_str}");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }}
-    </style>
-    """
-    st.markdown(page_bg_img, unsafe_allow_html=True)
-
-# Set the background image
-set_png_as_page_bg("background2.png")  # Change this to your image file name
 
