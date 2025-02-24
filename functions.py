@@ -3,6 +3,7 @@ from datetime import datetime
 import pandas as pd
 import requests
 import streamlit as st
+import numpy as np
 
 WEATHERAPI_KEY = "c7a754bf38384796ad2214825250802"
 
@@ -34,8 +35,8 @@ def fetch_weather_data(city, api_key=WEATHERAPI_KEY):
             })
 
     return pd.DataFrame(records) if records else None
-def calc_variance():
-    return None
+def calc_variance(data):
+    return np.var(data)
 
-def calc_std_deviation():
-    return None
+def calc_std_deviation(data):
+    return np.std(data)
