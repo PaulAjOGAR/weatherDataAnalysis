@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa292a05-3850-4451-b122-91257dac4a87" name="Changes" comment="Background is now permanent even when the button is pressed">
+    <list default="true" id="aa292a05-3850-4451-b122-91257dac4a87" name="Changes" comment="Inputted the box plot and scatter plot">
+      <change afterPath="$PROJECT_DIR$/Daily_Data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Hourly_Data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/explore_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +53,9 @@
     &quot;accountId&quot;: &quot;dc0416d7-d860-4d2f-a7fc-bb785edac911&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -68,6 +76,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -79,6 +88,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\PycharmProjects\PythonProject1" />
       <recent name="C:\Users\HP\PycharmProjects\PythonProject1\templates" />
       <recent name="C:\Users\HP\PycharmProjects\PythonProject1\web" />
     </key>
@@ -103,7 +113,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\HP\PycharmProjects\PythonProject1\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,8 +155,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PY-243.24978.54" />
-        <option value="bundled-python-sdk-91e3b7efe1d4-466328ff949b-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.24978.54" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.26053.29" />
+        <option value="bundled-python-sdk-b1dbf8ef85a6-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.26053.29" />
       </set>
     </attachedChunks>
   </component>
@@ -169,7 +179,15 @@
       <workItem from="1739659328482" duration="870000" />
       <workItem from="1739742154737" duration="5996000" />
       <workItem from="1739889398059" duration="9048000" />
-      <workItem from="1740428026050" duration="1280000" />
+      <workItem from="1740428026050" duration="1416000" />
+      <workItem from="1740516573824" duration="588000" />
+      <workItem from="1740651039452" duration="316000" />
+      <workItem from="1741621610859" duration="9743000" />
+      <workItem from="1743706923858" duration="1093000" />
+      <workItem from="1743761650664" duration="271000" />
+      <workItem from="1744711009288" duration="332000" />
+      <workItem from="1744711944754" duration="2674000" />
+      <workItem from="1744720418097" duration="9804000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -227,7 +245,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739908057268</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Inputted the box plot and scatter plot">
+      <option name="closed" value="true" />
+      <created>1740429396292</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740429396292</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,10 +266,11 @@
     <MESSAGE value="Made some changes like seperation of frontend from backend and adding a background picture" />
     <MESSAGE value="background2.png is now added" />
     <MESSAGE value="Background is now permanent even when the button is pressed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Background is now permanent even when the button is pressed" />
+    <MESSAGE value="Inputted the box plot and scatter plot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inputted the box plot and scatter plot" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Weather_Data_Analysis$python_app_py.coverage" NAME="python app.py Coverage Results" MODIFIED="1739338269195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Weather_Data_Analysis$main.coverage" NAME="main Coverage Results" MODIFIED="1739742688265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weather_Data_Analysis$main.coverage" NAME="main Coverage Results" MODIFIED="1741621645015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
