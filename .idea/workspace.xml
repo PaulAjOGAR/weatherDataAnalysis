@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa292a05-3850-4451-b122-91257dac4a87" name="Changes" comment="Inputted the box plot and scatter plot">
-      <change afterPath="$PROJECT_DIR$/Daily_Data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Hourly_Data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/explore_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
+    <list default="true" id="aa292a05-3850-4451-b122-91257dac4a87" name="Changes" comment="Made a lot of changes but trying to work on the hourly weather data">
+      <change afterPath="$PROJECT_DIR$/pages/Daily_Data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/Hourly_Data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/api_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/data_fetching.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/parsing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/plotting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Daily_Data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hourly_Data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/explore_data.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.py" beforeDir="false" afterPath="$PROJECT_DIR$/home.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +95,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\PycharmProjects\PythonProject1\pages" />
       <recent name="C:\Users\HP\PycharmProjects\PythonProject1" />
       <recent name="C:\Users\HP\PycharmProjects\PythonProject1\templates" />
       <recent name="C:\Users\HP\PycharmProjects\PythonProject1\web" />
@@ -187,7 +195,7 @@
       <workItem from="1743761650664" duration="271000" />
       <workItem from="1744711009288" duration="332000" />
       <workItem from="1744711944754" duration="2674000" />
-      <workItem from="1744720418097" duration="9804000" />
+      <workItem from="1744720418097" duration="34850000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -253,11 +261,30 @@
       <option name="project" value="LOCAL" />
       <updated>1740429396292</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Made a lot of changes but trying to work on the hourly weather data">
+      <option name="closed" value="true" />
+      <created>1744736765137</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744736765137</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
@@ -267,10 +294,11 @@
     <MESSAGE value="background2.png is now added" />
     <MESSAGE value="Background is now permanent even when the button is pressed" />
     <MESSAGE value="Inputted the box plot and scatter plot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inputted the box plot and scatter plot" />
+    <MESSAGE value="Made a lot of changes but trying to work on the hourly weather data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made a lot of changes but trying to work on the hourly weather data" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Weather_Data_Analysis$python_app_py.coverage" NAME="python app.py Coverage Results" MODIFIED="1739338269195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Weather_Data_Analysis$main.coverage" NAME="main Coverage Results" MODIFIED="1741621645015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weather_Data_Analysis$main.coverage" NAME="main Coverage Results" MODIFIED="1744743370951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

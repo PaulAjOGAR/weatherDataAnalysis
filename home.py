@@ -22,7 +22,7 @@ if input_mode == "City":
                     lon = data["results"][0]["longitude"]
                     st.session_state["latitude"] = lat
                     st.session_state["longitude"] = lon
-                    st.success(f"📍 {city}: {lat}, {lon}")
+                    st.success(f"{city}: {lat}, {lon}")
                     st.map(pd.DataFrame({"lat": [lat], "lon": [lon]}))
                 else:
                     st.warning("City not found.")
