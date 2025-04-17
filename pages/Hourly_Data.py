@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from functions import get_openmeteo_client, get_archive_hourly_weather
+from functions import get_openmeteo_client, get_archive_hourly_weather, parse_openmeteo_hourly_response
 
 st.title("🕒 Hourly Weather Data (Archive)")
 
@@ -20,7 +20,7 @@ mode = st.radio("Select Date Mode", ["Manual Range", "Search by Year"])
 if mode == "Search by Year":
     selected_year = st.selectbox("Select Year", list(range(1940, pd.Timestamp.now().year + 1))[::-1])
     start_date = pd.to_datetime(f"{selected_year}-01-01")
-    end_date = start_date + pd.Timedelta(days=30)
+    end_date = pd.to_datetime(f"{selected_year}-01-31")  # Max 31 days for hourly data
 else:
     start_date = st.date_input("Start date", min_value=pd.to_datetime("1940-01-01"))
     end_date = st.date_input("End date", min_value=pd.to_datetime("1940-01-01"))
@@ -34,9 +34,12 @@ if (end_date - start_date).days > 31:
 client = get_openmeteo_client()
 
 try:
-    df = get_archive_hourly_weather(lat, lon, start_date, end_date, client)
+    response = get_archive_hourly_weather(lat, lon, start_date, end_date, client)
+    df = parse_openmeteo_hourly_response(response)
+    st.write("📄 Raw Hourly Weather Data:")
+    st.dataframe(df, use_container_width=True)
 except Exception:
-    st.error("🚫 Daily API request limit exceeded. Please try again tomorrow.")
+    st.error("🚫 Hourly API request failed. Please try again later.")
     st.stop()
 
 if df is not None and not df.empty:

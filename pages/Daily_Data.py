@@ -21,7 +21,7 @@ mode = st.radio("Select Date Mode", ["Manual Range", "Search by Year"])
 if mode == "Search by Year":
     selected_year = st.selectbox("Select Year", list(range(1940, pd.Timestamp.now().year + 1))[::-1])
     start_date = pd.to_datetime(f"{selected_year}-01-01")
-    end_date = start_date + pd.Timedelta(days=89)
+    end_date = pd.to_datetime(f"{selected_year}-12-31")  # FULL YEAR RANGE
 else:
     start_date = st.date_input("Start date", min_value=pd.to_datetime("1940-01-01"))
     end_date = st.date_input("End date", min_value=pd.to_datetime("1940-01-01"))
@@ -30,6 +30,8 @@ st.caption(f"📅 Requesting data from **{start_date}** to **{end_date}**")
 
 try:
     df = get_archive_daily_weather(lat, lon, start_date, end_date)
+    st.write("📄 Raw Daily Weather Data:")
+    st.dataframe(df, use_container_width=True)  # DISPLAY RAW DATAFRAME
 except Exception:
     st.error("🚫 Daily API request limit exceeded. Please try again tomorrow.")
     st.stop()
