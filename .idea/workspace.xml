@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa292a05-3850-4451-b122-91257dac4a87" name="Changes" comment="Made improvements">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Daily_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Daily_Data.py" afterDir="false" />
+    <list default="true" id="aa292a05-3850-4451-b122-91257dac4a87" name="Changes" comment="Fixed module error">
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,7 +185,7 @@
       <workItem from="1744844273926" duration="4153000" />
       <workItem from="1744910393716" duration="5848000" />
       <workItem from="1745415728306" duration="1139000" />
-      <workItem from="1746260579585" duration="3900000" />
+      <workItem from="1746260579585" duration="4554000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -293,7 +291,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746266350185</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed module error">
+      <option name="closed" value="true" />
+      <created>1746267603079</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1746267603079</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +328,8 @@
     <MESSAGE value="Made a lot of changes" />
     <MESSAGE value="Fixed the code" />
     <MESSAGE value="Made improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made improvements" />
+    <MESSAGE value="Fixed module error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed module error" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
