@@ -69,8 +69,11 @@ with st.sidebar:
 
     # Navigation buttons
     st.subheader("Navigation")
-    st.button("🏠 Home", on_click=lambda: st.switch_page("main.py"))
-    st.button("🕒 Switch to Hourly View", on_click=lambda: st.switch_page("pages/Hourly_Data.py"))
+    if st.button("🏠 Home"):
+        st.switch_page("main.py")
+
+    if st.button("📊 Switch to Daily View"):
+        st.switch_page("pages/Daily_Data.py")
 
     st.markdown("---")
     st.markdown("### About Daily Data")

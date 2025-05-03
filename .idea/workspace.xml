@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa292a05-3850-4451-b122-91257dac4a87" name="Changes" comment="Fixed the code">
+    <list default="true" id="aa292a05-3850-4451-b122-91257dac4a87" name="Changes" comment="Made improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/Daily_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Daily_Data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/Hourly_Data.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/Hourly_Data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,7 @@
       <workItem from="1744844273926" duration="4153000" />
       <workItem from="1744910393716" duration="5848000" />
       <workItem from="1745415728306" duration="1139000" />
-      <workItem from="1746260579585" duration="2667000" />
+      <workItem from="1746260579585" duration="3900000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <option name="closed" value="true" />
@@ -286,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744911027957</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Made improvements">
+      <option name="closed" value="true" />
+      <created>1746266350185</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1746266350185</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +321,18 @@
     <MESSAGE value="Made a lot of changes but trying to work on the hourly weather data" />
     <MESSAGE value="Made a lot of changes" />
     <MESSAGE value="Fixed the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the code" />
+    <MESSAGE value="Made improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made improvements" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/Daily_Data.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Weather_Data_Analysis$python_app_py.coverage" NAME="python app.py Coverage Results" MODIFIED="1739338269195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

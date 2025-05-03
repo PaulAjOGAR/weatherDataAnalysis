@@ -10,3 +10,4 @@ requests-cache~=1.2.1
 streamlit-searchbox
 retry-requests
 jupyter_server~=2.15.0
+scipy
