@@ -321,7 +321,8 @@ with tab1:
                         x="time",
                         y=param,
                         title=f"{param_name} ({time_resolution})",
-                        color_discrete_sequence=px.colors.sequential.__getattribute__(color_scheme)
+                        color_discrete_sequence=px.colors.qualitative.Dark24
+
                     )
 
                 elif chart_type == "Scatter":
@@ -330,7 +331,8 @@ with tab1:
                         x="time",
                         y=param,
                         title=f"{param_name} ({time_resolution})",
-                        color_discrete_sequence=px.colors.sequential.__getattribute__(color_scheme)
+                        color_discrete_sequence=px.colors.qualitative.Dark24
+
                     )
 
                 else:  # Area
@@ -339,7 +341,8 @@ with tab1:
                         x="time",
                         y=param,
                         title=f"{param_name} ({time_resolution})",
-                        color_discrete_sequence=px.colors.sequential.__getattribute__(color_scheme)
+                        color_discrete_sequence=px.colors.qualitative.Dark24
+
                     )
 
                 # Add trendline separately if required (using statsmodels manually)
